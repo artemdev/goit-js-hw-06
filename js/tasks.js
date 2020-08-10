@@ -5,19 +5,19 @@ function getUserNames(users) {
   return users.map(num => num.name);
 }
 
-console.table(getUserNames(users)); // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+console.log(getUserNames(users)); // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
 const getUsersWithEyeColor = (users, color) => {
   return users.filter(user => user.eyeColor == color);
 };
 
-console.table(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 const getUsersWithGender = (users, gender) => {
   return users.filter(user => user.gender === gender).map(user => user.name);
 };
 
-console.table(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 // Получить массив только неактивных пользователей(поле isActive).
 const getInactiveUsers = users => {
@@ -25,7 +25,7 @@ const getInactiveUsers = users => {
   return users.filter(user => user.isActive === false);
 };
 
-console.table(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
 // Получить пользоваля(не массив) по email(поле email, он уникальный).
 const getUserWithEmail = (users, email) => {
@@ -42,9 +42,9 @@ const getUsersWithAge = (users, min, max) => {
   return users.filter(user => user.age >= min && user.age <= max);
 };
 
-console.table(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
+console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
 
-console.table(getUsersWithAge(users, 30, 40));
+console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
 const calculateTotalBalance = users => {
@@ -54,7 +54,7 @@ const calculateTotalBalance = users => {
   }, 0);
 };
 
-console.table(calculateTotalBalance(users)); // 20916
+console.log(calculateTotalBalance(users)); // 20916
 
 const getUsersWithFriend = (users, friendName) => {
   const hasNeededFriend = user => {
