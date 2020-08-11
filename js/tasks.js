@@ -1,5 +1,4 @@
-import * as data from './users.js';
-let users = data.default;
+import users from './users.js';
 
 function getUserNames(users) {
   return users.map(num => num.name);
@@ -35,9 +34,7 @@ const getUserWithEmail = (users, email) => {
 console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
 console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
 
-// Получить массив пользователей попадающих в возрастную категорию от min до max лет(поле age).
-
-const getUsersWithAge = (users, min, max) => {
+gitconst getUsersWithAge = (users, min, max) => {
   // твой код
   return users.filter(user => user.age >= min && user.age <= max);
 };
